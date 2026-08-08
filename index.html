@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BlockBustr | Discover Your Next Favorite Movie</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                🎬 BlockBustr
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#trending">Trending</a></li>
+
+                <li><a href="#top-rated">Top Rated</a></li>
+
+                <li><a href="#genres">Genres</a></li>
+
+                <li><a href="#favorites">Favorites</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+           <a class="hero-badge" href="#trending">
+    🔥 Trending Worldwide
+</a>
+
+
+
+            <h1>
+
+                Discover Your Next Favorite Movie
+
+            </h1>
+
+            <p>
+
+                Explore, search and discover amazing movies from around the world.
+
+            </p>
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for a movie...">
+
+                <button id="searchBtn">
+
+                    🔍
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- ================= MOVIE DETAILS ================= -->
+
+<section id="movie-details">
+
+<div class="details-backdrop"></div>
+
+
+<div class="details-container">
+
+
+<img id="details-image">
+
+
+<div class="details-content">
+
+
+
+<h2 id="details-title"></h2>
+
+
+<div id="details-meta"></div>
+
+
+<div class="extra-details">
+
+<span id="details-runtime"></span>
+
+<span id="details-language"></span>
+
+<span id="details-popularity"></span>
+
+</div>
+
+
+
+<p id="details-overview"></p>
+<button id="trailer-btn">Watch Trailer</button>
+
+<button id="close-details">Close</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+        <section class="featured">
+
+    <div class="featured-content">
+
+    <span class="featured-tag">
+        🎬 Featured Today
+    </span>
+
+
+    <h2 id="featured-title">
+        
+    </h2>
+
+
+    <div class="movie-meta" id="featured-meta">
+
+    </div>
+
+
+    <p id="featured-overview">
+
+    </p>
+
+
+    <div class="featured-buttons">
+
+
+        <button id="featured-trailer">
+            ▶ Watch Trailer
+        </button>
+
+
+        <button class="outline-btn" id="featured-info">
+            More Info
+        </button>
+
+
+    </div>
+
+
+</div>
+
+    
+
+</section>
+
+<section id="search-results">
+
+    <h2>🔍 Search Results</h2>
+
+    <div class="movie-grid" id="searchMovies">
+
+    </div>
+
+</section>
+
+        <section id="trending">
+
+    <h2>🔥 Trending</h2>
+
+    <div class="movie-grid" id="trendingMovies"></div>
+
+</section>
+
+
+<section id="top-rated">
+
+    <h2>⭐ Top Rated</h2>
+
+    <div class="movie-grid" id="topRatedMovies"></div>
+
+</section>
+
+        <section id="genres">
+
+            <h2>🎭 Genres</h2>
+
+            <div class="genre-grid">
+                
+
+
+<div class="genre-card action" data-genre="28">
+<h3>🔥 Action</h3>
+</div>
+
+
+<div class="genre-card adventure" data-genre="12">
+<h3>🌎 Adventure</h3>
+</div>
+
+
+<div class="genre-card sci" data-genre="878">
+<h3>🚀 Sci-Fi</h3>
+</div>
+
+
+<div class="genre-card fantasy" data-genre="14">
+<h3>🪄 Fantasy</h3>
+</div>
+
+
+<div class="genre-card horror" data-genre="27">
+<h3>👻 Horror</h3>
+</div>
+
+
+<div class="genre-card thriller" data-genre="53">
+<h3>🔪 Thriller</h3>
+</div>
+
+
+<div class="genre-card comedy" data-genre="35">
+<h3>😂 Comedy</h3>
+</div>
+
+
+<div class="genre-card drama" data-genre="18">
+<h3>🎭 Drama</h3>
+</div>
+
+
+<div class="genre-card romance" data-genre="10749">
+<h3>❤️ Romance</h3>
+</div>
+
+
+<div class="genre-card mystery" data-genre="9648">
+<h3>🕵️ Mystery</h3>
+</div>
+
+
+<div class="genre-card animation" data-genre="16">
+<h3>🎨 Animation</h3>
+</div>
+
+
+<div class="genre-card documentary" data-genre="99">
+<h3>🎥 Documentary</h3>
+</div>
+
+
+</div>
+
+<div id="genre-result">
+
+    <h2 id="genre-title"></h2>
+
+    <div id="genreMovies" class="movie-grid"></div>
+
+</div>
+
+        <section id="favorites">
+
+<h2>❤️ Favorites</h2>
+
+<div id="favoritesMovies" class="movie-grid">
+
+</div>
+
+</section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            🎬 BLOCKBUSTR
+        </div>
+
+
+        <p>
+            Discover movies. Explore worlds. Experience cinema.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="#">Home</a>
+
+            <a href="#trending">Trending</a>
+
+            <a href="#top-rated">Top Rated</a>
+
+            <a href="#genres">Genres</a>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 BlockBustr • Built with HTML, CSS & JavaScript
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
