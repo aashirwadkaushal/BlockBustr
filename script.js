@@ -517,12 +517,8 @@ block:"start"
 }
 
 async function openTrailer(movieId) {
-    const trailerTab = window.open("", "_blank");
-
-    if (!trailerTab) {
-        alert("Please allow pop-ups to watch the trailer.");
-        return;
-    }
+    const modal = document.getElementById("trailer-modal");
+    const frame = document.getElementById("trailer-frame");
 
     try {
         const response = await fetch(
@@ -539,18 +535,34 @@ async function openTrailer(movieId) {
             data.results.find(video => video.site === "YouTube");
 
         if (trailer) {
-            trailerTab.location.href =
-                `https://www.youtube.com/watch?v=${trailer.key}`;
+            frame.src =
+                `https://www.youtube-nocookie.com/embed/${trailer.key}?autoplay=1&rel=0`;
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden";
         } else {
-            trailerTab.close();
             alert("Trailer is not available for this movie.");
         }
     } catch (error) {
-        trailerTab.close();
         console.error("Trailer Error:", error);
         alert("Could not load the trailer. Please try again.");
     }
 }
+
+function closeTrailer() {
+    const modal = document.getElementById("trailer-modal");
+    const frame = document.getElementById("trailer-frame");
+    frame.src = "";
+    modal.style.display = "none";
+    document.body.style.overflow = "";
+}
+
+document.getElementById("close-trailer").addEventListener("click", closeTrailer);
+
+document.getElementById("trailer-modal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeTrailer();
+    }
+});
 
 // CLOSE DETAILS
 
