@@ -1,10 +1,6 @@
-const BASE_URL = "/api/tmdb";
+const API_KEY = "26f048e106a683702b2fb2bb90265a47";
 
-async function tmdbFetch(endpoint) {
-    return fetch(
-        `${BASE_URL}?path=${encodeURIComponent(endpoint)}`
-    );
-}
+const BASE_URL = "https://api.themoviedb.org/3";
 
 const IMAGE_URL = "https://image.tmdb.org/t/p/w500";
 
